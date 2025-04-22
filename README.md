@@ -5,7 +5,7 @@
 [Amirhossein Tavakoli](https://github.com/amirhosseintavakoli)
 
 # Introduction
-We travel back in time to participate in the Kaggle competition [Grupo Bimbo Inventory Demand](https://www.kaggle.com/competitions/grupo-bimbo-inventory-demand/data), which ended 9 years ago.  [Grupo Bimbo](https://www.grupobimbo.com/) is a large Mexican company that sells baked goods all over the world.  The objective of this competition is to predict the demand of various baked goods purchased by various clients on a week to week basis.
+We travel back in time to participate in the Kaggle competition [Grupo Bimbo Inventory Demand](https://www.kaggle.com/competitions/grupo-bimbo-inventory-demand/data).  [Grupo Bimbo](https://www.grupobimbo.com/) is a large Mexican company that sells baked goods all over the world.  The objective of this competition is to predict the demand of various baked goods purchased by various clients on a week to week basis.
 
 
 # Dataset
