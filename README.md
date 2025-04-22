@@ -1,7 +1,7 @@
 # Predicting Inventory Demand
 
 ## Team members
-[Elliot Blackstone](https://github.com/ElliotBlackstone)
+[Elliot Blackstone](https://github.com/ElliotBlackstone)\
 [Amirhossein Tavakoli](https://github.com/amirhosseintavakoli)
 
 # Introduction
@@ -26,3 +26,10 @@ Models are scored against the true data (not available to public, you must submi
 Due to the size of the dataset, it can't be uploaded to Github.  See the [Kaggle competition](https://www.kaggle.com/competitions/grupo-bimbo-inventory-demand/data) to download the datasets.
 
 ## Notebooks:
+[2_town_state.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/2_town_state.ipynb) produces location based heat maps of client sales\
+[simple_models.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/simple_models.ipynb) contains 4 different simple models that are based off of aggregate statistics\
+[xgboost_final_EB.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/xgboost_final_EB.ipynb) is a well explained notebook of one of our top models\
+[xgboost_final_minmaxgrid_EB.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/xgboost_final_minmaxgrid_EB.ipynb) is a slight improvement of the model in the previous file, which produced our top score
+
+## Folder:
+The folder 'etc' contained many files with poor notation that were used to build our understanding of the dataset and various models.
