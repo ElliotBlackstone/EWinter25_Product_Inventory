@@ -13,11 +13,11 @@ The training dataset is provided by Grupo Bimbo and has roughly 75 million entri
 
 
 # Preprocessing
-Our only preprocessing step is to compute the aggregate statistics of each client and each product.
+We have two preprocessing steps.  First, we create an ID for each client/product combination in the training and test data.  This useful as the ID can be used to easily determine if a client/product combination is in the training set and/or test set.  Our second step is to compute the aggregate statistics of each client and each product.
 
 
 # Model Selection and Results
-Models are scored against the true data (not available to public, you must submit to Kaggle to get a score) by root mean squared log error.  After making some simple baseline models using aggregate statistics, our best model is a gridsearch cross validated XGBoost model trained with the previous 3 weeks of adjusted demand, client ID, client mean/median/min/max, product ID, and product mean/median.  The score from Kaggle on this model was 0.491.  For reference, the best score on the Kaggle leaderboard is 0.442.
+Models are scored against the true data (not available to public, you must submit to Kaggle to get a score) by root mean squared log error.  After making some simple baseline models using aggregate statistics, our best model is a gridsearch cross validated XGBoost model trained with the previous 3 weeks of adjusted demand, client ID, client mean/median/min/max, product ID, and product mean/median.  The score from Kaggle on this model was 0.491.  LightGBM is another gradient boosting method that is more efficient than XGBoost.  Computing power was an issue for the project, so using the same predictors to train a LightGBM model, our score improved to 0.477.  For reference, the best score on the Kaggle leaderboard is 0.442.
 
 
 # Files
@@ -29,7 +29,8 @@ Due to the size of the dataset, it can't be uploaded to Github.  See the [Kaggle
 [2_town_state.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/2_town_state.ipynb) produces location based heat maps of client sales\
 [simple_models.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/simple_models.ipynb) contains 4 different simple models that are based off of aggregate statistics\
 [xgboost_final_EB.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/xgboost_final_EB.ipynb) is a well explained notebook of one of our top models\
-[xgboost_final_minmaxgrid_EB.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/xgboost_final_minmaxgrid_EB.ipynb) is a slight improvement of the model in the previous file, which produced our top score
+[xgboost_final_minmaxgrid_EB.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/xgboost_final_minmaxgrid_EB.ipynb) is a slight improvement of the model in the previous file, which produced our top score with XGBoost\
+[lgb-prediction.ipynb](https://github.com/ElliotBlackstone/EWinter25_Product_Inventory/blob/main/lgb-prediction.ipynb) uses the same predictors as our best XGBoost model but scores better
 
 ## Folder:
 The folder 'etc' contained many files with poor notation that were used to build our understanding of the dataset and various models.
